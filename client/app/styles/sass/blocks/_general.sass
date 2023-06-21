@@ -1,0 +1,23 @@
+.container
+   display: block
+   margin: 0 auto
+   max-width: 1200px
+   padding: 0 15px
+
+   @media (max-width: 768px)
+      padding: 0 10px
+
+.container_flex
+   display: flex
+   align-items: center
+
+.hidden
+   display: none
+   pointer-events: none
+   opacity: 0
+
+.disabled
+   cursor: not-allowed
+   pointer-events: all
+
+   background-color: rgba($blue, 0.4)

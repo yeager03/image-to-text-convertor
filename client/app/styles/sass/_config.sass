@@ -1,0 +1,63 @@
+$blue: #0083fc
+$dark-blue: #1E2027
+
+$bg-color: #262A2F
+$white: #fff
+$black: #333
+
+$fontsize: 16px
+$textcolor: $white
+$lineheight: 1.25
+$userfont: 'Roboto Mono', monospace // 'Montserrat', sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+
+::placeholder
+	color: #666
+
+html, body
+	height: 100%
+
+h1,h2,h3,p,ul,li
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+	color: inherit
+
+	&:hover
+		color: inherit
+
+img
+	max-width: 100%
+	height: auto
+
+main
+	padding-top: 90px
+
+	@media (max-width: 1024px)
+		padding-top: 80px
+
+	@media (max-width: 992px)
+		padding-top: 70px
+
+	@media (max-width: 576px)
+		padding-top: 60px
+
+section
+	min-height: 300px
+
+body
+	background-color: $bg-color
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

@@ -1,0 +1,172 @@
+.header {
+	position: fixed;
+	width: 100%;
+	height: 90px;
+
+	@media (max-width: 1024px) {
+		height: 80px;
+	}
+
+	@media (max-width: 992px) {
+		height: 70px;
+	}
+
+	@media (max-width: 576px) {
+		height: 60px;
+	}
+
+	.container {
+		height: 100%;
+		justify-content: space-between;
+	}
+
+	&_fixed {
+		transition: background-color 0.25s ease-out;
+		background-color: $dark-blue;
+		z-index: 10;
+	}
+
+	&-logo {
+		background-color: $white;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 1024px) {
+			width: 60px;
+			height: 60px;
+		}
+
+		@media (max-width: 992px) {
+			width: 50px;
+			height: 50px;
+		}
+
+		@media (max-width: 576px) {
+			width: 40px;
+			height: 40px;
+		}
+
+		img {
+			max-width: 70px;
+			object-fit: cover;
+
+			@media (max-width: 1024px) {
+				max-width: 60px;
+			}
+
+			@media (max-width: 992px) {
+				max-width: 50px;
+			}
+
+			@media (max-width: 576px) {
+				max-width: 40px;
+			}
+		}
+	}
+
+	.header-list {
+		@media (max-width: 768px) {
+			width: 100%;
+			height: 100vh;
+			position: fixed;
+			z-index: 100;
+
+			top: 0;
+			left: 0;
+
+			visibility: hidden;
+			transform: translateY(-150%);
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+
+			transition: transform 0.5s ease-out;
+
+			background-color: $dark-blue;
+
+			padding: 0 50px;
+
+			@media (max-width: 576px) {
+				padding: 0 30px;
+			}
+
+			&_active {
+				visibility: visible;
+				transform: translate(0);
+			}
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-right: 30px;
+
+				@media (max-width: 768px) {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		&__link {
+			transition: color 0.25s ease-out;
+
+			font-size: 18px;
+
+			&:hover {
+				color: $blue;
+			}
+
+			&_active {
+				color: $blue;
+			}
+
+			@media (max-width: 1024px) {
+				font-size: 16px;
+			}
+			@media (max-width: 992px) {
+				font-size: 14px;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 30px;
+			}
+
+			@media (max-width: 576px) {
+				font-size: 23px;
+			}
+		}
+	}
+
+	&-burger {
+		position: relative;
+		display: none;
+
+		background: none;
+		border: none;
+		outline: 0;
+
+		width: 35px;
+		height: 35px;
+
+		background-color: $blue;
+
+		i {
+			font-size: 17px;
+			color: $white;
+		}
+
+		border-radius: 2px;
+
+		@media (max-width: 768px) {
+			display: block;
+			z-index: 150;
+		}
+	}
+}
